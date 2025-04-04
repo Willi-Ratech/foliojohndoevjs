@@ -71,6 +71,10 @@ h1{
   background-color: #1e3653;
 }
 
+
+
+
+/* Mode par défaut */
 body {
   font-family:Helvetica,georgia,Arial, sans-serif;
   transition: background-color 0.3s, color 0.3s;
@@ -80,18 +84,6 @@ body {
   padding: 20px;  
 }
 
-
-
-
-
-
-/* Mode clair par défaut */
-/* body {
-  background-color: white;
-  color: black;
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
-} */
 
 /* Mode sombre */
 body.dark-mode {
@@ -269,4 +261,16 @@ p{
 
 .ftfoot{
   color: white;
+}
+
+
+button{
+  background-color:#1e3653;
+  color: white; /* Couleur du texte */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+
 }

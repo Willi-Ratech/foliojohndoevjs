@@ -23,8 +23,70 @@ text.addEventListener("mouseover", () => {
 });
 
 
-//Arrow flêche
 
+// // PARAMETRE DE FLECHE LEFT RIGHT
+// const buttonleft = document.getElementById ("prev");
+// buttonleft.addEventListener ("click",myFunction);
+
+// function myFunction (){
+//     // document.getElementById ("demo").innerHTML = 'imagepreview';
+//     buttonleft.addEventListener("click",() =>){
+        
+//     }
+// }
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const imagesInner = document.querySelector(".images-inner");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+    const slides = document.querySelectorAll(".image-slide");
+    const slideWidth = slides[0].clientWidth;
+    let currentIndex = 0;
+  
+    // Fonction pour déplacer le slider vers la gauche
+    prevButton.addEventListener("click", () => {
+      currentIndex--;
+      if (currentIndex < 0) {
+        currentIndex = slides.length - 1; // Boucle vers le dernier slide
+      }
+      updateSlider();
+    });
+  
+    // Fonction pour déplacer le slider vers la droite
+    nextButton.addEventListener("click", () => {
+      currentIndex++;
+      if (currentIndex >= slides.length) {
+        currentIndex = 0; // Boucle vers le premier slide
+      }
+      updateSlider();
+    });
+  
+    // Mettre à jour la position du slider
+    function updateSlider() {
+      imagesInner.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+  });
+
+
+// Arrow flêche
+
+
+// Ici je voulais mettre la fonction pour controller le slide mais 
+// j'ai pa pu le faire , git
+
+
+
+
+
+//Arrow flêche 
 
 
 text.addEventListener("mouseout", () => {
@@ -52,6 +114,16 @@ logo.addEventListener("click", () => {
 logo.style.transform = "rotate(360deg)";
 });
 
+
+
+
+
+
+function toggleDropdown() {
+    const dropdownList = document.getElementById('dropdown-list');
+    // Alterne la visibilité de la liste déroulante
+    dropdownList.style.display = dropdownList.style.display === 'block' ? 'none' : 'block';
+}
 
 
 
